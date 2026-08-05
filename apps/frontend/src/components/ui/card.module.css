@@ -1,0 +1,128 @@
+.card {
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s;
+}
+
+.cardNone {
+  padding: 0;
+}
+
+.cardSmall {
+  padding: 1rem;
+}
+
+.cardMedium {
+  padding: 1.5rem;
+}
+
+.cardLarge {
+  padding: 2rem;
+}
+
+.cardShadowNone {
+  box-shadow: none;
+}
+
+.cardShadowSmall {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cardShadowMedium {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.cardShadowLarge {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cardHover:hover {
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.cardContent {
+  margin-bottom: 1rem;
+}
+
+.cardFooter {
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardFooterActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cardFooterText {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.cardInteractive {
+  cursor: pointer;
+}
+
+.cardInteractive:hover {
+  border-color: #3b82f6;
+}
+
+.cardSelected {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.cardDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.cardLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.cardError {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.cardSuccess {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.cardWarning {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.cardInfo {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}

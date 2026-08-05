@@ -1,0 +1,445 @@
+.chartsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.chartCard {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.chartTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.chartActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chartAction {
+  padding: 0.5rem;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #6b7280;
+}
+
+.chartAction:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.chartContent {
+  position: relative;
+  min-height: 300px;
+}
+
+.chartSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.barChart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 250px;
+  padding: 1rem 0;
+}
+
+.bar {
+  flex: 1;
+  margin: 0 0.25rem;
+  background: #3b82f6;
+  border-radius: 0.25rem 0.25rem 0 0;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bar:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.barLabel {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.barValue {
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.bar:hover .barValue {
+  opacity: 1;
+}
+
+.lineChart {
+  position: relative;
+  height: 250px;
+}
+
+.lineChartPath {
+  fill: none;
+  stroke: #3b82f6;
+  stroke-width: 2;
+}
+
+.lineChartArea {
+  fill: url(#gradient);
+  opacity: 0.3;
+}
+
+.lineChartPoint {
+  fill: #3b82f6;
+  stroke: white;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lineChartPoint:hover {
+  r: 6;
+}
+
+.pieChart {
+  position: relative;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pieSlice {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pieSlice:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.pieLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1f2937;
+  text-anchor: middle;
+}
+
+.pieValue {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-anchor: middle;
+}
+
+.chartLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.legendColor {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.125rem;
+}
+
+.legendLabel {
+  font-weight: 500;
+}
+
+.legendValue {
+  color: #6b7280;
+  margin-left: 0.25rem;
+}
+
+.chartTooltip {
+  position: absolute;
+  background: #1f2937;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+
+.chartTooltipVisible {
+  opacity: 1;
+}
+
+.chartGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.gridLine {
+  stroke: #e5e7eb;
+  stroke-width: 1;
+  stroke-dasharray: 2, 2;
+}
+
+.gridAxis {
+  stroke: #9ca3af;
+  stroke-width: 1;
+}
+
+.gridLabel {
+  font-size: 0.75rem;
+  fill: #6b7280;
+  text-anchor: middle;
+}
+
+.gridLabelX {
+  text-anchor: middle;
+}
+
+.gridLabelY {
+  text-anchor: end;
+}
+
+.chartLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  color: #6b7280;
+}
+
+.chartEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  color: #6b7280;
+  gap: 1rem;
+}
+
+.emptyIcon {
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.5;
+}
+
+.emptyText {
+  font-size: 0.875rem;
+}
+
+.chartError {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  color: #ef4444;
+  gap: 0.5rem;
+}
+
+.errorIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.errorText {
+  font-size: 0.875rem;
+}
+
+.chartControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.chartFilters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chartFilter {
+  padding: 0.375rem 0.75rem;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #374151;
+}
+
+.chartFilter:hover {
+  background: #e5e7eb;
+}
+
+.chartFilterActive {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.chartExport {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.exportButton {
+  padding: 0.375rem 0.75rem;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #374151;
+}
+
+.exportButton:hover {
+  background: #e5e7eb;
+}
+
+.chartResponsive {
+  overflow-x: auto;
+}
+
+.chartResponsive svg {
+  min-width: 600px;
+}
+
+.chartAnimation {
+  animation: chartFadeIn 0.5s ease-out;
+}
+
+@keyframes chartFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chartBarAnimation {
+  animation: barGrow 0.5s ease-out forwards;
+}
+
+@keyframes barGrow {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--bar-height);
+  }
+}
+
+.chartLineAnimation {
+  animation: lineDraw 1s ease-out forwards;
+}
+
+@keyframes lineDraw {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.chartPieAnimation {
+  animation: pieGrow 0.5s ease-out forwards;
+}
+
+@keyframes pieGrow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .chartCard {
+    padding: 1rem;
+  }
+
+  .chartHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .chartControls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .chartFilters {
+    flex-wrap: wrap;
+  }
+
+  .chartLegend {
+    gap: 0.5rem;
+  }
+
+  .legendItem {
+    font-size: 0.75rem;
+  }
+
+  .chartResponsive svg {
+    min-width: 100%;
+  }
+}

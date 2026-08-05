@@ -1,0 +1,306 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.modalSmall {
+  max-width: 400px;
+  width: 100%;
+}
+
+.modalMedium {
+  max-width: 600px;
+  width: 100%;
+}
+
+.modalLarge {
+  max-width: 800px;
+  width: 100%;
+}
+
+.modalXLarge {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.modalHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.modalClose {
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.modalClose:hover {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.modalBody {
+  padding: 1.5rem;
+}
+
+.modalFooter {
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modalFooterCenter {
+  justify-content: center;
+}
+
+.modalFooterSpaceBetween {
+  justify-content: space-between;
+}
+
+.modalActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.modalContent {
+  color: #374151;
+  line-height: 1.6;
+}
+
+.modalLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.modalError {
+  color: #ef4444;
+  text-align: center;
+  padding: 2rem;
+}
+
+.modalSuccess {
+  color: #10b981;
+  text-align: center;
+  padding: 2rem;
+}
+
+.modalWarning {
+  color: #f59e0b;
+  text-align: center;
+  padding: 2rem;
+}
+
+.modalInfo {
+  color: #3b82f6;
+  text-align: center;
+  padding: 2rem;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modalFormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modalFormLabel {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.modalFormInput {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.modalFormInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.modalFormError {
+  color: #ef4444;
+  font-size: 0.75rem;
+}
+
+.modalFormActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.modalScrollable {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.modalNoPadding {
+  padding: 0;
+}
+
+.modalNoHeader {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.modalNoFooter {
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.modalCentered {
+  text-align: center;
+}
+
+.modalCentered .modalTitle {
+  text-align: center;
+}
+
+.modalCentered .modalFooter {
+  justify-content: center;
+}
+
+.modalDark {
+  background: #1f2937;
+  color: white;
+}
+
+.modalDark .modalHeader {
+  border-bottom-color: #374151;
+}
+
+.modalDark .modalTitle {
+  color: white;
+}
+
+.modalDark .modalClose {
+  color: #9ca3af;
+}
+
+.modalDark .modalClose:hover {
+  background: #374151;
+  color: white;
+}
+
+.modalDark .modalFooter {
+  border-top-color: #374151;
+}
+
+.modalDark .modalContent {
+  color: #f3f4f6;
+}
+
+.modalDark .modalFormLabel {
+  color: #f3f4f6;
+}
+
+.modalDark .modalFormInput {
+  background: #374151;
+  border-color: #4b5563;
+  color: white;
+}
+
+.modalDark .modalFormInput::placeholder {
+  color: #9ca3af;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes modalSlideOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(-20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .modalOverlay {
+    padding: 0.5rem;
+  }
+
+  .modal {
+    max-width: 100%;
+    max-height: 95vh;
+  }
+
+  .modalHeader,
+  .modalBody,
+  .modalFooter {
+    padding: 1rem;
+  }
+
+  .modalFooter {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .modalActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modalFormActions {
+    flex-direction: column;
+  }
+}

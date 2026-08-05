@@ -1,0 +1,481 @@
+.lazyImage {
+  position: relative;
+  overflow: hidden;
+  background: #f3f4f6;
+  transition: opacity 0.3s ease;
+}
+
+.lazyImageLoading {
+  opacity: 0.7;
+}
+
+.lazyImageLoaded {
+  opacity: 1;
+}
+
+.lazyImagePlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px);
+  transition: opacity 0.3s ease;
+}
+
+.lazyImagePlaceholderHidden {
+  opacity: 0;
+}
+
+.lazyImageActual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.lazyImageError {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 0.875rem;
+  border: 1px solid #fecaca;
+  border-radius: 0.375rem;
+}
+
+
+
+.virtualList {
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.virtualListContainer {
+  position: relative;
+}
+
+.virtualListItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  will-change: transform;
+}
+
+.infiniteScroll {
+  position: relative;
+}
+
+.infiniteScrollLoader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+.infiniteScrollError {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.375rem;
+  margin: 1rem;
+}
+
+.infiniteScrollEnd {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.imageOptimization {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.imageOptimizationResponsive {
+  width: 100%;
+  height: auto;
+}
+
+.imageOptimizationThumbnail {
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+
+.imageOptimizationLoaded {
+  filter: none;
+  transform: scale(1);
+}
+
+.codeSplitting {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.codeSplittingLoader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #6b7280;
+}
+
+.codeSplittingError {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #dc2626;
+  padding: 2rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.375rem;
+}
+
+.memoizedComponent {
+  /* Prevent layout shifts during re-renders */
+  contain: layout style paint;
+}
+
+.performanceMonitor {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  z-index: 9999;
+  min-width: 200px;
+}
+
+.performanceMonitorTitle {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #10b981;
+}
+
+.performanceMetric {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.performanceMetricLabel {
+  color: #9ca3af;
+}
+
+.performanceMetricValue {
+  color: #10b981;
+}
+
+.performanceMetricWarning {
+  color: #f59e0b;
+}
+
+.performanceMetricError {
+  color: #ef4444;
+}
+
+.resourcePreloader {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.criticalImage {
+  display: none;
+}
+
+.criticalCSS {
+  display: none;
+}
+
+.serviceWorkerUpdate {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #3b82f6;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  max-width: 300px;
+}
+
+.serviceWorkerUpdateTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.serviceWorkerUpdateMessage {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.serviceWorkerUpdateActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.serviceWorkerUpdateButton {
+  flex: 1;
+  padding: 0.5rem;
+  background: white;
+  color: #3b82f6;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.serviceWorkerUpdateButton:hover {
+  background: #f0f9ff;
+}
+
+.serviceWorkerUpdateButtonSecondary {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.serviceWorkerUpdateButtonSecondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.offlineIndicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ef4444;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  z-index: 9999;
+  animation: slideInRight 0.3s ease-out;
+}
+
+.onlineIndicator {
+  background: #10b981;
+}
+
+.cacheStatus {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-family: monospace;
+  z-index: 9999;
+}
+
+.cacheStatusOnline {
+  background: rgba(16, 185, 129, 0.8);
+}
+
+.cacheStatusOffline {
+  background: rgba(239, 68, 68, 0.8);
+}
+
+.performanceMetrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.metricCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.metricTitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.metricValue {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.metricUnit {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-left: 0.25rem;
+}
+
+.metricGood {
+  color: #10b981;
+}
+
+.metricWarning {
+  color: #f59e0b;
+}
+
+.metricError {
+  color: #ef4444;
+}
+
+.optimizationTips {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.optimizationTipsTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0369a1;
+  margin-bottom: 1rem;
+}
+
+.optimizationTip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.optimizationTipIcon {
+  color: #0369a1;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.optimizationTipText {
+  color: #0c4a6e;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.bundleAnalyzer {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.bundleAnalyzerTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.bundleSize {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.bundleSizeName {
+  font-weight: 500;
+  color: #374151;
+}
+
+.bundleSizeValue {
+  font-family: monospace;
+  color: #6b7280;
+}
+
+.bundleSizeLarge {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.bundleSizeMedium {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.bundleSizeSmall {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .performanceMonitor {
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.625rem;
+    min-width: 150px;
+  }
+
+  .serviceWorkerUpdate {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    max-width: none;
+  }
+
+  .offlineIndicator {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    text-align: center;
+  }
+
+  .performanceMetrics {
+    grid-template-columns: 1fr;
+  }
+
+  .bundleAnalyzer {
+    padding: 1rem;
+  }
+}

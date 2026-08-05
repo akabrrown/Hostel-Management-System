@@ -1,0 +1,16 @@
+{
+  "name": "upsa-hostel-management-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "dependencies": {
+    "docx": "^9.7.1"
+  }
+}

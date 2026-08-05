@@ -1,0 +1,409 @@
+/* Admin Account Management Page Styles */
+
+.pageHeader {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.statsCards {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.accountsTable {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.statsCard {
+  transition: all 0.3s ease;
+}
+
+.statsCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.statsIcon {
+  transition: transform 0.3s ease;
+}
+
+.statsCard:hover .statsIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.accountRow {
+  transition: all 0.3s ease;
+}
+
+.accountRow:hover {
+  background-color: #f8fafc;
+  transform: translateX(4px);
+}
+
+.roleBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.statusBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.searchInput {
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filterSelect {
+  transition: all 0.3s ease;
+}
+
+.filterSelect:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.actionButton {
+  transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+  transform: scale(1.05);
+}
+
+.createButton {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  transition: all 0.3s ease;
+}
+
+.createButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+/* User Avatar */
+.userAvatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.accountRow:hover .userAvatar {
+  transform: scale(1.1);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.userName {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.userEmail {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 12px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modalBody {
+  padding: 1.5rem;
+}
+
+.modalFooter {
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* Form Styles */
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.formSelect {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.formSelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.formGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.formGrid2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Role Colors */
+.roleStudent {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.roleAdmin {
+  background-color: #f3e8ff;
+  color: #9333ea;
+}
+
+.rolePorter {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+.roleDirector {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+/* Status Colors */
+.statusActive {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+.statusInactive {
+  background-color: #f8fafc;
+  color: #6b7280;
+}
+
+.statusSuspended {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+/* Lock Status */
+.lockStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lockIcon {
+  width: 1rem;
+  height: 1rem;
+  color: #dc2626;
+}
+
+/* Last Login */
+.lastLogin {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Hostel/Room Info */
+.hostelRoom {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Index Number */
+.indexNumber {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-family: 'Courier New', monospace;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+  transform: scale(1.05);
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.emptyStateIcon {
+  margin: 0 auto 1rem;
+  color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 1rem 0;
+  }
+  
+  .statsCards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .accountsTable {
+    padding: 1rem;
+  }
+  
+  .searchInput {
+    width: 100%;
+  }
+  
+  .filterSelect {
+    width: 100%;
+  }
+  
+  .modalContent {
+    margin: 1rem;
+    max-width: calc(100vw - 2rem);
+  }
+  
+  .formGrid2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .userInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .actionButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsCards {
+    grid-template-columns: 1fr;
+  }
+  
+  .accountRow {
+    padding: 0.75rem;
+  }
+  
+  .createButton {
+    width: 100%;
+  }
+  
+  .modalFooter {
+    flex-direction: column;
+  }
+  
+  .lockStatus {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

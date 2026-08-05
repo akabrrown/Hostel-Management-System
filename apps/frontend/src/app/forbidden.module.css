@@ -1,0 +1,166 @@
+.forbiddenContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  padding: 2rem;
+}
+
+.forbiddenCard {
+  max-width: 500px;
+  width: 100%;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  text-align: center;
+}
+
+.forbiddenIcon {
+  font-size: 4rem;
+  color: #dc2626;
+  margin-bottom: 1.5rem;
+}
+
+.forbiddenTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.forbiddenMessage {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.forbiddenCode {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.forbiddenActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.homeButton {
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.homeButton:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.logoutButton {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoutButton:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.forbiddenDetails {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.permissionList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.permissionItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.permissionDenied {
+  color: #dc2626;
+}
+
+.permissionGranted {
+  color: #059669;
+}
+
+.helpText {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.contactLink {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .forbiddenCard {
+    padding: 2rem;
+  }
+
+  .forbiddenTitle {
+    font-size: 1.5rem;
+  }
+
+  .forbiddenIcon {
+    font-size: 3rem;
+  }
+
+  .forbiddenCode {
+    font-size: 2rem;
+  }
+
+  .forbiddenActions {
+    flex-direction: column;
+  }
+
+  .homeButton,
+  .logoutButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,229 @@
+# UPSA Hostel Management System - Project Rules
+
+ALL changes and implementation details MUST strictly adhere to the guidelines and specifications defined in:
+
+## Primary Authority Documents
+
+1.  **`todo.md`**
+    *   **Purpose**: The single source of truth for task tracking, feature requirements, and implementation order.
+    *   **Rule**: Do not implement features not listed here without prior approval. Check off tasks only when fully verified.
+
+2.  **`SYSTEM_ARCHITECTURE.md`**
+    *   **Purpose**: Defines the rigid system structure, user roles, authentication flows, and security protocols.
+    *   **Rule**: All code must fit within the defined 4-role system (Student, Admin, Porter, Director). Do not introduce new auth flows or patterns that contradict this document.
+
+## Critical Implementation Rules
+
+### Security First Mandate
+- **Always apply security tools** listed in `todo.md`: Zod, Turnstile, Upstash Redis, DOMPurify
+- **No exceptions** to security requirements - all API routes must use validation
+- **Audit logging** required for all administrative actions
+- **Rate limiting** mandatory on all public endpoints
+
+### Technology Stack Compliance
+- **Next.js 14** with App Router (no pages router)
+- **Supabase** for database and authentication
+- **Redux Toolkit** for state management (no Context API for complex state)
+- **Tailwind CSS** for styling (no inline styles or custom CSS unless absolutely necessary)
+- **TypeScript** strictly enforced (no JavaScript files)
+
+### File Structure Requirements
+- **Components**: `src/components/ui/` for reusable UI, `src/components/features/` for feature-specific
+- **API Routes**: `src/app/api/[route]/route.ts` pattern only
+- **Utilities**: `src/lib/` for shared logic
+- **Types**: `src/types/` for TypeScript interfaces
+- **Hooks**: `src/hooks/` for custom React hooks
+
+## Code Quality Standards
+
+### TypeScript Requirements
+- **Strict mode** enabled in tsconfig.json
+- **No `any` types** - use proper interfaces
+- **Explicit return types** for functions
+- **JSDoc comments** for complex functions
+
+### React Component Standards
+- **Functional components only** (no class components)
+- **Props interfaces** always defined
+- **Default exports** for components
+- **Proper error boundaries** for feature components
+
+### API Route Standards
+- **Zod validation** on all inputs
+- **Consistent error handling** with proper HTTP status codes
+- **Security middleware** applied to all routes
+- **Type-safe responses** with defined interfaces
+
+## Security Implementation Rules
+
+### Input Validation
+- **Zod schemas** required for all user inputs
+- **Server-side validation** mandatory (client-side is UX enhancement only)
+- **Sanitization** using DOMPurify for any rich text content
+- **Parameterized queries** via Prisma ORM (no raw SQL)
+
+### Authentication & Authorization
+- **Role-based access control** strictly enforced
+- **JWT tokens** with proper expiration
+- **Secure session management** with HTTP-only cookies
+- **CSRF protection** on all state-changing requests
+
+### Rate Limiting & Protection
+- **Upstash Redis** for distributed rate limiting
+- **Cloudflare Turnstile** on auth pages
+- **IP blocking** for suspicious activity
+- **Request throttling** based on user roles
+
+## Database & Data Rules
+
+### Schema Management
+- **Prisma migrations** only (no manual schema changes)
+- **Foreign key constraints** always enforced
+- **Index optimization** for query performance
+- **Audit fields** (created_at, updated_at) on all tables
+
+### Data Access Patterns
+- **Repository pattern** for data access
+- **Transaction management** for multi-table operations
+- **Soft deletes** for data retention
+- **Proper error handling** for database operations
+
+## Frontend Development Rules
+
+### Component Architecture
+- **Atomic design** principles (atoms, molecules, organisms)
+- **Props drilling** avoided with context for simple cases, Redux for complex state
+- **Loading states** for all async operations
+- **Error boundaries** for graceful error handling
+
+### Styling Guidelines
+- **Tailwind utility classes** primarily
+- **Component-specific CSS** only when absolutely necessary
+- **Responsive design** mobile-first approach
+- **Accessibility** compliance (WCAG 2.1 AA)
+
+### State Management
+- **Redux Toolkit** for complex global state
+- **React state** for simple local state
+- **React Query** for server state management
+- **Proper loading/error states** always implemented
+
+## Testing Requirements
+
+### Unit Testing
+- **Jest** for unit tests
+- **80%+ coverage** required for critical paths
+- **Mock external dependencies** properly
+- **Test both success and error cases**
+
+### Integration Testing
+- **API endpoint testing** with test database
+- **Database transaction testing**
+- **Authentication flow testing**
+- **Cross-component integration testing**
+
+### E2E Testing
+- **Playwright** for end-to-end tests
+- **Critical user journeys** covered
+- **Cross-browser testing** for core functionality
+- **Mobile responsiveness** verification
+
+## Documentation Standards
+
+### Code Documentation
+- **JSDoc comments** for all public functions
+- **Complex business logic** documented inline
+- **API endpoints** documented with examples
+- **Component props** documented with usage examples
+
+### Project Documentation
+- **README.md** kept current with setup instructions
+- **API documentation** updated for all endpoints
+- **Database schema** documented and versioned
+- **Deployment guides** updated with each release
+
+## Performance Requirements
+
+### Frontend Performance
+- **Code splitting** implemented for large bundles
+- **Image optimization** with proper sizing and formats
+- **Lazy loading** for below-the-fold content
+- **Bundle size** monitoring and optimization
+
+### Backend Performance
+- **Database query optimization** with proper indexing
+- **Caching strategies** implemented with Redis
+- **API response times** under 200ms for 95th percentile
+- **Connection pooling** for database connections
+
+## Deployment & DevOps Rules
+
+### Environment Management
+- **Environment variables** properly documented
+- **Secret management** with secure storage
+- **Database migrations** run in production with oversight
+- **Rollback procedures** documented and tested
+
+### CI/CD Requirements
+- **Automated testing** on all pull requests
+- **Code quality gates** with linting and type checking
+- **Security scanning** for dependencies
+- **Deployment approvals** for production environments
+
+## Emergency & Maintenance Rules
+
+### Bug Fixing Protocol
+- **Hotfixes** follow proper branching strategy
+- **Root cause analysis** for production issues
+- **Post-incident reviews** documented
+- **Preventive measures** implemented
+
+### Maintenance Procedures
+- **Regular dependency updates** with security patches
+- **Database maintenance** scheduled and documented
+- **Performance monitoring** with alerting
+- **Backup verification** procedures tested
+
+## Compliance & Governance
+
+### Data Protection
+- **GDPR compliance** for student data
+- **Data retention policies** implemented
+- **Access logging** for sensitive operations
+- **Data anonymization** for development environments
+
+### Audit Requirements
+- **Change logs** maintained for all deployments
+- **Access controls** regularly reviewed
+- **Security audits** performed quarterly
+- **Compliance reporting** as required
+
+## Enforcement & Violations
+
+### Code Review Process
+- **All changes** require peer review
+- **Automated checks** must pass
+- **Security review** for sensitive changes
+- **Architecture compliance** verified
+
+### Violation Consequences
+- **Non-compliant code** will be rejected
+- **Security violations** require immediate remediation
+- **Repeated violations** may affect access
+- **Critical violations** reported to project leadership
+
+---
+
+## Quick Reference Checklist
+
+Before committing any code, verify:
+- [ ] Security requirements implemented (Zod, rate limiting, audit logging)
+- [ ] TypeScript strict mode compliance
+- [ ] Proper error handling implemented
+- [ ] Tests written and passing
+- [ ] Documentation updated
+- [ ] Performance considerations addressed
+- [ ] Accessibility compliance verified
+- [ ] Code follows established patterns
+
+Remember: **Security, Quality, and Compliance are non-negotiable.**

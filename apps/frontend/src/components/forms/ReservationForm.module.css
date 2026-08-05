@@ -1,0 +1,626 @@
+.reservationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formSteps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.stepIndicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  position: relative;
+  z-index: 1;
+}
+
+.stepIndicatorActive {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.stepIndicatorCompleted {
+  color: #10b981;
+}
+
+.stepNumber {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #f3f4f6;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 2px solid #e5e7eb;
+}
+
+.stepNumberActive {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.stepNumberCompleted {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+.stepLine {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  right: 2rem;
+  height: 2px;
+  background: #e5e7eb;
+  z-index: 0;
+}
+
+.stepLineCompleted {
+  background: #10b981;
+}
+
+.formSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sectionIcon {
+  color: #3b82f6;
+}
+
+.sectionSubtitle {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.formGridTwo {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.formGridThree {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroupFull {
+  grid-column: 1 / -1;
+}
+
+.roomSelection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.roomCard {
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+  position: relative;
+}
+
+.roomCard:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.roomCardSelected {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.roomCardDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.roomCardDisabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.roomBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ef4444;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.roomBadgeAvailable {
+  background: #10b981;
+}
+
+.roomBadgeLimited {
+  background: #f59e0b;
+}
+
+.roomHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.roomInfo {
+  flex: 1;
+}
+
+.roomNumber {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.roomType {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.roomPrice {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #3b82f6;
+  text-align: right;
+}
+
+.roomFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.roomFeature {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.roomCapacity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.capacityIndicator {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.capacityDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #e5e7eb;
+}
+
+.capacityDotFilled {
+  background: #3b82f6;
+}
+
+.preferenceSection {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.preferenceTitle {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.preferenceOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.preferenceOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.preferenceOption:hover {
+  background: #f3f4f6;
+}
+
+.preferenceOptionSelected {
+  background: #f0f9ff;
+  border-color: #3b82f6;
+}
+
+.summarySection {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.summaryTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #166534;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.summaryCard {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dcfce7;
+}
+
+.summaryCardTitle {
+  font-weight: 500;
+  color: #166534;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.summaryCardContent {
+  color: #374151;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.summaryTotal {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dcfce7;
+  margin-bottom: 1.5rem;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0fdf4;
+}
+
+.totalRow:last-child {
+  border-bottom: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #166534;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 2px solid #dcfce7;
+}
+
+.totalLabel {
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.totalValue {
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.backButton {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.backButton:hover {
+  background: #e5e7eb;
+}
+
+.backButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nextButton {
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nextButton:hover {
+  background: #2563eb;
+}
+
+.nextButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submitButton {
+  background: #10b981;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.submitButton:hover {
+  background: #059669;
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.buttonLoading {
+  position: relative;
+  color: transparent;
+}
+
+.buttonLoading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: -0.5rem 0 0 -0.5rem;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.termsSection {
+  background: #fffbeb;
+  border: 1px solid #fed7aa;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.termsTitle {
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.termsContent {
+  color: #78350f;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.termsCheckbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.termsCheckbox input {
+  margin-top: 0.25rem;
+}
+
+.termsLabel {
+  font-size: 0.875rem;
+  color: #78350f;
+  line-height: 1.5;
+}
+
+.termsLink {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.termsLink:hover {
+  text-decoration: underline;
+}
+
+.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+
+
+.progressIndicator {
+  margin-bottom: 2rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 0.5rem;
+  background: #e5e7eb;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressFill {
+  height: 100%;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .formGridTwo,
+  .formGridThree {
+    grid-template-columns: 1fr;
+  }
+
+  .formSteps {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stepLine {
+    display: none;
+  }
+
+  .roomSelection {
+    grid-template-columns: 1fr;
+  }
+
+  .preferenceOptions {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formActions {
+    flex-direction: column;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .backButton,
+  .nextButton,
+  .submitButton {
+    width: 100%;
+  }
+}

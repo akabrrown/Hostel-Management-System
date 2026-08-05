@@ -1,0 +1,144 @@
+.select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  background: white;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.select:disabled {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.selectError {
+  border-color: #ef4444;
+}
+
+.selectError:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.selectSmall {
+  padding: 0.375rem 1.5rem 0.375rem 0.5rem;
+  font-size: 0.75rem;
+  background-size: 1.25em 1.25em;
+}
+
+.selectLarge {
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  font-size: 1rem;
+  background-size: 1.75em 1.75em;
+}
+
+.selectMultiple {
+  background-image: none;
+  height: auto;
+  min-height: 2.5rem;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #6b7280;
+  z-index: 1;
+}
+
+.selectWithIcon {
+  padding-right: 2.5rem;
+  background-image: none;
+}
+
+.selectErrorText {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+
+.selectHelperText {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.selectLabel {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.selectLabelRequired {
+  color: #ef4444;
+  margin-left: 0.25rem;
+}
+
+.selectContainer {
+  margin-bottom: 1rem;
+}
+
+.selectContainerSmall {
+  margin-bottom: 0.5rem;
+}
+
+.selectContainerLarge {
+  margin-bottom: 1.5rem;
+}
+
+.selectGroup {
+  display: flex;
+  align-items: stretch;
+}
+
+.selectGroup .select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+.selectGroupAddon {
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-left: none;
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.selectLoading {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3ccircle cx='10' cy='10' r='8' stroke='%236b7280' stroke-width='2' stroke-dasharray='4 4'/%3e%3c/svg%3e");
+  animation: spin 1s linear infinite;
+}
+
+
+}

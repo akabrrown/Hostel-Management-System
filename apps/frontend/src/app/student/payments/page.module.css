@@ -1,0 +1,174 @@
+/* Student Payments Page Styles */
+
+.pageHeader {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.paymentSummary {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.paymentList {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.paymentCard {
+  transition: all 0.3s ease;
+}
+
+.paymentCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.statusIcon {
+  transition: transform 0.3s ease;
+}
+
+.paymentCard:hover .statusIcon {
+  transform: scale(1.1);
+}
+
+.summaryCard {
+  transition: all 0.3s ease;
+}
+
+.summaryCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.summaryIcon {
+  transition: transform 0.3s ease;
+}
+
+.summaryCard:hover .summaryIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.payButton {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  transition: all 0.3s ease;
+}
+
+.payButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.searchInput {
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filterSelect {
+  transition: all 0.3s ease;
+}
+
+.filterSelect:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.emptyState {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Status Colors */
+.statusPaid {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+.statusPending {
+  background-color: #fefce8;
+  color: #d97706;
+}
+
+.statusOverdue {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+/* Payment Amount Styles */
+.paymentAmount {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #1f2937;
+}
+
+.paymentReference {
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.paymentDate {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 1rem 0;
+  }
+  
+  .paymentSummary {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .paymentList {
+    padding: 0;
+  }
+  
+  .paymentCard {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .searchInput {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .paymentSummary {
+    grid-template-columns: 1fr;
+  }
+  
+  .paymentCard {
+    padding: 0.75rem;
+  }
+  
+  .paymentAmount {
+    font-size: 1rem;
+  }
+  
+  .payButton {
+    width: 100%;
+  }
+}

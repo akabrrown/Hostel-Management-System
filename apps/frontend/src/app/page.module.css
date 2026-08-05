@@ -1,0 +1,102 @@
+/* page.module.css */
+
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://upsa.edu.gh/wp-content/uploads/2020/08/slide-7.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  /* Premium dark gradient that transitions into a slight blue tint at the bottom */
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.7) 0%,
+    rgba(0, 51, 102, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.accentText {
+  color: #60a5fa; /* Tailwind blue-400 */
+  display: inline-block;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+  font-weight: 300;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .ctaContainer {
+    flex-direction: row;
+  }
+}
+
+/* Glassmorphism Button */
+.glassButton {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glassButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Primary Button */
+.primaryButton {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.6);
+}

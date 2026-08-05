@@ -1,0 +1,121 @@
+/* UPSA Hostel Management System - Global Styles */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom CSS Variables for Brand Colors */
+:root {
+  --navy-primary: #1e3a8a;
+  --navy-secondary: #1e40af;
+  --navy-dark: #1e2e5a;
+  --gold-primary: #fbbf24;
+  --gold-secondary: #f59e0b;
+  --gold-light: #fef3c7;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  .btn-primary {
+    @apply bg-navy-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-navy-secondary transition-colors duration-200 shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-gold-primary text-navy-primary px-6 py-3 rounded-lg font-semibold hover:bg-gold-secondary transition-colors duration-200 shadow-md;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-navy-primary text-navy-primary px-6 py-3 rounded-lg font-semibold hover:bg-navy-primary hover:text-white transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-primary focus:border-transparent transition-all duration-200;
+  }
+  
+  .nav-link {
+    @apply text-gray-600 hover:text-navy-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+  }
+  
+  .nav-link.active {
+    @apply text-navy-primary bg-navy-light/10;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .text-navy-primary {
+    color: var(--navy-primary);
+  }
+  
+  .text-gold-primary {
+    color: var(--gold-primary);
+  }
+  
+  .bg-navy-primary {
+    background-color: var(--navy-primary);
+  }
+  
+  .bg-gold-primary {
+    background-color: var(--gold-primary);
+  }
+  
+  .shadow-gold {
+    box-shadow: 0 4px 14px 0 rgba(251, 191, 36, 0.2);
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design Helpers */
+@media (max-width: 768px) {
+  .card {
+    @apply p-4;
+  }
+  
+  .btn-primary, .btn-secondary, .btn-outline {
+    @apply px-4 py-2 text-sm;
+  }
+}

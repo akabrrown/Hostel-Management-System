@@ -1,0 +1,317 @@
+/* Porter Check-out Page Styles */
+
+.pageHeader {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.searchSection {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.checkoutList {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.statsCard {
+  transition: all 0.3s ease;
+}
+
+.statsCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.statsIcon {
+  transition: transform 0.3s ease;
+}
+
+.statsCard:hover .statsIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.checkoutCard {
+  transition: all 0.3s ease;
+}
+
+.checkoutCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.searchInput {
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.searchResult {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.searchResult:hover {
+  background-color: #f8fafc;
+  transform: translateX(4px);
+}
+
+.selectedStudent {
+  animation: slideIn 0.3s ease-out;
+}
+
+.checkoutButton {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  transition: all 0.3s ease;
+}
+
+.checkoutButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+}
+
+.activeBadge {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.checkedOutBadge {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+/* User Avatar */
+.userAvatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content-center;
+  transition: transform 0.3s ease;
+}
+
+.checkoutCard:hover .userAvatar {
+  transform: scale(1.1);
+}
+
+/* Check-in/Check-out Icons */
+.checkinIcon {
+  color: #2563eb;
+}
+
+.checkoutIcon {
+  color: #16a34a;
+}
+
+/* Duration Badge */
+.durationBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #fefce8;
+  color: #d97706;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Time Info */
+.timeInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.timeIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+/* Search Results */
+.searchResults {
+  max-height: 12rem;
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+.searchResultItem {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.searchResultItem:last-child {
+  margin-bottom: 0;
+}
+
+.searchResultName {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.searchResultDetails {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.searchResultTime {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+/* Student Info */
+.studentInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.studentDetails {
+  flex: 1;
+}
+
+.studentName {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.studentMeta {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.studentTime {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Status Indicators */
+.statusActive {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.statusCheckedOut {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.emptyStateIcon {
+  margin: 0 auto 1rem;
+  color: #9ca3af;
+}
+
+.emptyStateTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.emptyStateDescription {
+  color: #6b7280;
+}
+
+/* Loading Spinner */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 1rem 0;
+  }
+  
+  .statsCards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .searchSection {
+    padding: 1rem;
+  }
+  
+  .checkoutList {
+    padding: 0;
+  }
+  
+  .searchInput {
+    width: 100%;
+  }
+  
+  .studentInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .checkoutCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .checkoutButton {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchResultItem {
+    padding: 0.5rem;
+  }
+  
+  .checkoutCard {
+    padding: 0.75rem;
+  }
+  
+  .timeInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+  to {
+    transform: rotate(360deg);
+  }
+}

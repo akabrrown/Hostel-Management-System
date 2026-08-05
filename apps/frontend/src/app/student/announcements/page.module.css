@@ -1,0 +1,185 @@
+/* Student Announcements Page Styles */
+
+.pageHeader {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.searchSection {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.announcementsList {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.announcementCard {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.announcementCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.announcementCard.unread {
+  border-left: 4px solid #3b82f6;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.unreadIndicator {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.priorityBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.categoryBadge {
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.announcementIcon {
+  transition: transform 0.3s ease;
+}
+
+.announcementCard:hover .announcementIcon {
+  transform: scale(1.1);
+}
+
+.searchInput {
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filterSelect {
+  transition: all 0.3s ease;
+}
+
+.filterSelect:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.emptyState {
+  animation: fadeIn 0.6s ease-out;
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Priority Colors */
+.priorityHigh {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.priorityMedium {
+  background-color: #fefce8;
+  color: #d97706;
+}
+
+.priorityLow {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+/* Category Colors */
+.categoryGeneral {
+  background-color: #f8fafc;
+  color: #6b7280;
+}
+
+.categoryAcademic {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+.categoryPayment {
+  background-color: #fefce8;
+  color: #d97706;
+}
+
+.categoryMaintenance {
+  background-color: #fff7ed;
+  color: #ea580c;
+}
+
+.categoryEmergency {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 1rem 0;
+  }
+  
+  .searchSection {
+    padding: 1rem;
+  }
+  
+  .announcementsList {
+    padding: 0;
+  }
+  
+  .announcementCard {
+    padding: 1rem;
+  }
+  
+  .searchInput {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .announcementCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .announcementIcon {
+    margin-bottom: 1rem;
+  }
+  
+  .priorityBadge {
+    margin-bottom: 0.5rem;
+  }
+}

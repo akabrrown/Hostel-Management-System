@@ -1,0 +1,40 @@
+# dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# testing
+coverage/
+
+# next.js & builds
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# misc
+.DS_Store
+*.pem
+~$*
+
+# debug / temporary logs and scratch
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+*.txt
+scratch/
+scratch_*
+fix.js
+
+# local env files
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# ide / local agent rules
+rules/

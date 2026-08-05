@@ -1,0 +1,519 @@
+.reservationContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+}
+
+.reservationForm {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.formSection {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionIcon {
+  color: #3b82f6;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.formSelect {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  background: white;
+  transition: all 0.2s;
+}
+
+.formSelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  resize: vertical;
+  min-height: 100px;
+  transition: all 0.2s;
+}
+
+.formTextarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.hostelSelection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hostelCard {
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+}
+
+.hostelCard:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hostelCardSelected {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.hostelName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.hostelLocation {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hostelFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.hostelFeature {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.hostelAvailability {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.availabilityIndicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+.available {
+  background: #10b981;
+}
+
+.limited {
+  background: #f59e0b;
+}
+
+.full {
+  background: #ef4444;
+}
+
+.roomPreference {
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.preferenceOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.preferenceOption {
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+  text-align: center;
+}
+
+.preferenceOption:hover {
+  border-color: #3b82f6;
+}
+
+.preferenceOptionSelected {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.preferenceIcon {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+.preferenceTitle {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.preferenceDescription {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.reservationSummary {
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summaryTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.summaryRow:last-child {
+  border-bottom: none;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.summaryLabel {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.summaryValue {
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.summaryTotal {
+  font-size: 1.125rem;
+  color: #3b82f6;
+}
+
+.timeline {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.timelineTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.timelineSteps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.timelineSteps::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e5e7eb;
+  z-index: 0;
+}
+
+.timelineStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineStepNumber {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid white;
+}
+
+.timelineStepActive {
+  background: #3b82f6;
+  color: white;
+}
+
+.timelineStepCompleted {
+  background: #10b981;
+  color: white;
+}
+
+.timelineStepLabel {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.timelineStepActive .timelineStepLabel {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.timelineStepCompleted .timelineStepLabel {
+  color: #10b981;
+  font-weight: 500;
+}
+
+.timelineDescription {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.backButton {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.backButton:hover {
+  background: #e5e7eb;
+}
+
+.submitButton {
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.submitButton:hover {
+  background: #2563eb;
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.termsSection {
+  margin-bottom: 2rem;
+}
+
+.termsCheckbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.termsCheckbox input {
+  margin-top: 0.25rem;
+}
+
+.termsLabel {
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.termsLink {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.termsLink:hover {
+  text-decoration: underline;
+}
+
+.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+
+
+
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .timelineSteps {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .timelineSteps::before {
+    display: none;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hostelSelection {
+    grid-template-columns: 1fr;
+  }
+  
+  .preferenceOptions {
+    grid-template-columns: 1fr;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .backButton,
+  .submitButton {
+    width: 100%;
+  }
+}

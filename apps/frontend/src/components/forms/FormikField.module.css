@@ -1,0 +1,376 @@
+.formikField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fieldLabel {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.fieldWrapper {
+  position: relative;
+}
+
+.fieldInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  background: white;
+}
+
+.fieldInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.fieldInput::placeholder {
+  color: #9ca3af;
+}
+
+.fieldInputError {
+  border-color: #ef4444;
+}
+
+.fieldInputError:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.fieldInputDisabled {
+  background: #f9fafb;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.fieldSelect {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  background: white;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.fieldSelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.fieldSelectError {
+  border-color: #ef4444;
+}
+
+.fieldSelectError:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.fieldTextarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  resize: vertical;
+  min-height: 100px;
+  transition: all 0.2s;
+  background: white;
+  font-family: inherit;
+}
+
+.fieldTextarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.fieldTextareaError {
+  border-color: #ef4444;
+}
+
+.fieldTextareaError:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.passwordToggle:hover {
+  color: #374151;
+  background: #f3f4f6;
+}
+
+.fieldError {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.errorIcon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.fieldHelper {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.fieldGroup {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.fieldAddon {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem 0 0 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.fieldWithAddon .fieldInput {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.fieldPrefix {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 0.875rem;
+  pointer-events: none;
+}
+
+.fieldWithPrefix .fieldInput {
+  padding-left: 2.5rem;
+}
+
+.fieldSuffix {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 0.875rem;
+  pointer-events: none;
+}
+
+.fieldWithSuffix .fieldInput {
+  padding-right: 2.5rem;
+}
+
+.fieldLoading {
+  position: relative;
+}
+
+.fieldLoading::after {
+  content: '';
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.fieldSuccess {
+  border-color: #10b981 !important;
+}
+
+.fieldSuccess:focus {
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+}
+
+.fieldWarning {
+  border-color: #f59e0b !important;
+}
+
+.fieldWarning:focus {
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1) !important;
+}
+
+.checkboxField {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.checkboxInput {
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.checkboxLabel {
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radioInput {
+  flex-shrink: 0;
+}
+
+.radioLabel {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.fileField {
+  border: 2px dashed #d1d5db;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+  background: #f9fafb;
+}
+
+.fileField:hover {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.fileFieldDragOver {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.fileInput {
+  display: none;
+}
+
+.fileContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fileIcon {
+  width: 3rem;
+  height: 3rem;
+  color: #6b7280;
+}
+
+.fileText {
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.fileHint {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.filePreview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.filePreviewItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #f3f4f6;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  color: #374151;
+}
+
+.fileRemove {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.fileRemove:hover {
+  background: #fef2f2;
+}
+
+
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+  .fieldGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fieldAddon {
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    margin-bottom: 0.5rem;
+  }
+
+  .fieldWithAddon .fieldInput {
+    border-radius: 0.5rem;
+  }
+
+  .fileField {
+    padding: 1rem;
+  }
+}

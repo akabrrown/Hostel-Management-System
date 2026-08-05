@@ -1,0 +1,41 @@
+.layoutContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageContainer {
+  flex: 1;
+  background: #f9fafb;
+}
+
+.pageContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .pageContent {
+    padding: 1rem;
+  }
+}
+
+.loadingLayout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+
+
+  100% { transform: rotate(360deg); }
+}

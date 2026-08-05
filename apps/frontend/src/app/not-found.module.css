@@ -1,0 +1,213 @@
+.notFoundContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  padding: 2rem;
+}
+
+.notFoundCard {
+  max-width: 500px;
+  width: 100%;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  text-align: center;
+}
+
+.notFoundIcon {
+  font-size: 4rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.notFoundTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.notFoundMessage {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.notFoundCode {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.notFoundActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.homeButton {
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.homeButton:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.searchButton {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.searchButton:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.notFoundSuggestions {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.suggestionsTitle {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.suggestionsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestionItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.suggestionLink {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.suggestionLink:hover {
+  text-decoration: underline;
+}
+
+.searchBox {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.searchSubmit {
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.searchSubmit:hover {
+  background: #2563eb;
+}
+
+.helpText {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.contactLink {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .notFoundCard {
+    padding: 2rem;
+  }
+
+  .notFoundTitle {
+    font-size: 1.5rem;
+  }
+
+  .notFoundIcon {
+    font-size: 3rem;
+  }
+
+  .notFoundCode {
+    font-size: 2rem;
+  }
+
+  .notFoundActions {
+    flex-direction: column;
+  }
+
+  .homeButton,
+  .searchButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .searchBox {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,200 @@
+/* page.module.css */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+}
+
+.hero {
+  background: linear-gradient(to right, #0f172a, #1e3a8a);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: #f8fafc;
+  transform: skewY(-1.5deg);
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: #93c5fd;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mainContent {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .mainContent {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  height: max-content;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding-right: 1rem;
+  border-right: 1px solid #e2e8f0;
+}
+
+/* Hide scrollbar for sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.sidebarTitle {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.tocList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tocLink {
+  display: block;
+  font-size: 0.925rem;
+  color: #475569;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+  padding-left: 10px;
+  border-left: 2px solid transparent;
+}
+
+.tocLink:hover {
+  color: #2563eb;
+  border-left-color: #2563eb;
+}
+
+.tocLinkActive {
+  color: #1e40af;
+  font-weight: 600;
+  border-left-color: #1e40af;
+}
+
+/* Content Area */
+.contentArea {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 640px) {
+  .contentArea {
+    padding: 1.5rem;
+  }
+}
+
+.section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 100px;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.subSectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  margin-bottom: 1.25rem;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.numberedList {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.numberedList li {
+  margin-bottom: 0.5rem;
+}
+
+.glassCard {
+  background: rgba(241, 245, 249, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlightText {
+  color: #dc2626;
+  font-weight: 600;
+}
